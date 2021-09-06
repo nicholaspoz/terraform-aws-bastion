@@ -219,6 +219,9 @@ resource "aws_lb" "bastion_lb" {
   tags               = merge(var.tags)
 
   enable_deletion_protection = true
+  access_logs {
+    enabled = true
+  }
 }
 
 resource "aws_lb_target_group" "bastion_lb_target_group" {
