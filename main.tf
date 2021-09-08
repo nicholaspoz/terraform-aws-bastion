@@ -221,6 +221,7 @@ resource "aws_lb" "bastion_lb" {
   enable_deletion_protection = true
   access_logs {
     enabled = true
+    bucket = var.bastion_lb_access_log_bucket
   }
 }
 

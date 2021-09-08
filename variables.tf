@@ -136,3 +136,8 @@ variable "instance_type" {
   description = "Instance size of the bastion"
   default     = "t3.nano"
 }
+
+variable "bastion_lb_access_log_bucket" {
+  description = "custom bucket for bastion lb access logs"
+  type = string
+}
